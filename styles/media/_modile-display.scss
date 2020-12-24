@@ -1,0 +1,161 @@
+@media screen and (max-width: 808px) {
+    .container {
+        width: 300px;
+    }
+
+    // Section
+
+    .section {
+        margin-top: 35px;
+
+        &__title {
+            margin-bottom: 15px;
+        }
+
+        &-search {
+            .section__title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // Header
+
+    .header-wrapper {
+        padding: 20px 0px 153px;
+    }
+
+    .header {
+        flex-direction: column-reverse;
+
+        width: 100%;
+        height: 157px;
+    }
+
+    // Hero
+
+    .hero {
+        margin-top: 26px;
+
+        width: 272px;
+
+        &__title {
+            margin-bottom: 5px;
+
+            font-size: 30px;
+            line-height: 37px;
+        }
+        &__text {
+            margin-bottom: 27px;
+
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    // Works
+
+    .works {
+        flex-wrap: wrap;
+    }
+
+    .work {
+        width: 300px;
+        height: 240px;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+
+    // Partner
+
+    .partners {
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .partner {
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+    }
+
+    // Ideas
+
+    .ideas {
+        grid-template-rows: repeat(7, 120px);
+        grid-row-gap: 10px;
+
+        &__item {
+            &-1,
+            &-2,
+            &-3,
+            &-4,
+            &-5,
+            &-6,
+            &-7 {
+                grid-column: 1 / 4;
+            }
+        }
+    }
+
+    // Search
+
+    .search {
+        &__text {
+            margin-bottom: 15px;
+        }
+
+        &__form {
+            .search__button {
+                margin: 10px 0 0 0;
+
+                width: 100%;
+            }
+        }
+    }
+
+    // Footer
+
+    .footer-wrapper {
+        margin-top: 40px;
+        padding: 21px 22px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .company-name {
+        margin-bottom: 13px;
+    }
+
+    .info {
+        text-align: center;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 1px;
+
+            li:not(:nth-child(4)) {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .info-partners {
+        margin-top: 6px;
+    }
+
+    .designed-by {
+        margin-top: 14px;
+    }
+}
