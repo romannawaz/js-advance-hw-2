@@ -20,10 +20,6 @@ const paths = {
         src: 'src/styles/**/*.scss',
         dest: 'build/styles',
     },
-    /* js: {
-        src: 'src/js/*.js',
-        dest: 'build/js',
-    }, */
     fonts: {
         src: 'src/fonts/**/*.ttf',
         dest: 'build/fonts',
@@ -69,14 +65,6 @@ function buildCss() {
         .pipe(browserSync.stream());
 }
 
-/* function buildJs() {
-    return gulp.src(paths.js.src)
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(paths.js.dest))
-        .pipe(browserSync.stream());
-} */
-
 function buildFonts() {
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest))
@@ -93,7 +81,6 @@ function buildImages() {
 function watch() {
     gulp.watch(paths.pug.src, buildHTML);
     gulp.watch(paths.styles.src, buildCss);
-    gulp.watch(paths.js.src, buildJs);
     gulp.watch(paths.images.src, buildImages);
 }
 
@@ -102,7 +89,7 @@ function cleanBuild() {
         .pipe(clean());
 }
 
-const build = gulp.series(cleanBuild, gulp.parallel(buildHTML, buildCss, buildFonts,/* buildJs, */ buildImages));
+const build = gulp.series(cleanBuild, gulp.parallel(buildHTML, buildCss, buildFonts, buildImages));
 
 gulp.task('build', build);
 
